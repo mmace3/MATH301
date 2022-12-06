@@ -72,6 +72,33 @@ If $a, b \in \mathbb{R}$ and $a < b$, then $\displaystyle a < a + \frac{|b - a|}
 
 \begin{proof}
 Let $a, b \in \mathbb{R}$ and suppose $a < b$. Since $\displaystyle \frac{|b - a|}{2} > 0$ then by \autoref{lemma:a} $\displaystyle a < a + \frac{|b - a|}{2}$. 
+
+Now we will show that $\displaystyle a + \frac{|b - a|}{2} < b$ by considering two cases: $(b - a) < 0$ or $(b - a) > 0$. If $(b - a) < 0$ then $|b - a| = a - b$. By assumption $a < b$ and so
+
+\begin{equation*}
+  \begin{split}
+  3a < 3b &\Rightarrow 3a - b < 2b \\
+  &\Rightarrow 2a + (a - b) < 2b \\ 
+	&\Rightarrow 2a + |b - a| < 2b \\
+	&\Rightarrow a + \frac{|b - a|}{2} < b.
+	\end{split}
+\end{equation*}
+
+In the case that $(b - a) > 0$ then $|b - a| = b - a$. By assumption $a < b$ and so 
+
+\begin{equation*}
+\begin{split}
+2a - a < 2b - b &\Rightarrow 2a - a + b < 2b \\
+&\Rightarrow 2a + (b - a) < 2b \\
+&\Rightarrow 2a + |b - a| < 2b \\
+&\Rightarrow a + \frac{|b - a|}{2} < b.
+\end{split}
+\end{equation*}
+
+
+Since the cases are exhaustive then we can conclude that $\displaystyle a + \frac{|b - a|}{2} < b$.
+
+Now we have shown that $\displaystyle a < a + \frac{|b - a|}{2}$ and $\displaystyle a + \frac{|b - a|}{2} < b$. Therefore $\displaystyle a < a + \frac{|b - a|}{2} < b$.
 \end{proof}
 
 
