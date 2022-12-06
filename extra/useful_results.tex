@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+
+%\documentclass{amsart}
+%\documentclass{scrartcl}
+%\usepackage{changepage}
+%\usepackage{scrextend}
+
+\usepackage{amssymb,amsmath,amsthm}
+% amssymb has empty set symbo
+\usepackage{scrextend} % for \begin{addmargin}[0.55cm]{0cm} text \end{margin}
+
+\usepackage{mathrsfs} % for \mathscr{P}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{hanging}
+\usepackage{verbatim}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage[nameinlink]{cleveref}
+
+\newcommand{\n}{ \noindent }
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\G}{\mathcal{G}}
+
+
+\newcommand{\pwset}{\mathcal{P}}
+%\newcommand{\pwset}{\mathscr{P}}
+
+
+\newtheorem*{theorem}{Theorem}  % This enables \begin{theorem}
+
+%\DeclareFontFamily{U}{MnSymbolC}{}
+%\DeclareSymbolFont{MnSyC}{U}{MnSymbolC}{m}{n}
+%\DeclareFontShape{U}{MnSymbolC}{m}{n}{
+%  <-6>    MnSymbolC5
+%  <6-7>   MnSymbolC6
+%  <7-8>   MnSymbolC7
+%  <8-9>   MnSymbolC8
+%  <9-10>  MnSymbolC9
+%  <10-12> MnSymbolC10
+%  <12->   MnSymbolC12%
+%}{}
+%\DeclareMathSymbol{\powerset}{\mathord}{MnSyC}{180}
+
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[left=1.2in, right=1.2in, top=1in, bottom=1in]{geometry}
+
+\newtheorem*{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+
+\newcommand{\lemmaautorefname}{Lemma}
+
+\title{Useful Results}
+
+\begin{document}
+
+\maketitle
+
+Below are some results I proved in my Introduction to Real Analysis Course. I found some of them useful and even though some may seem obvious I wanted to do the formal proof for myself. Also, I wanted a place to put these results so I could come back and find them pretty easily when needed.
+
+
+\begin{lemma} \label{lemma:a}
+If $a \in \mathbb{R}$, $\varepsilon \in \mathbb{R}$, and $\varepsilon > 0$, then $a < a + \varepsilon$.
+\end{lemma}
+
+\begin{proof}
+Let $a, \varepsilon \in \mathbb{R}$ and suppose $\varepsilon > 0$. For the sake of contradiction assume $a \geq a + \varepsilon$. Then $a - (a + \varepsilon) \geq 0$, which implies that $-\varepsilon \geq 0$ and so $\varepsilon \leq 0$. However, $\varepsilon > 0$ by assumption and so we have that $\varepsilon > 0$ and $\varepsilon \leq 0$. This is a contradiction because for every real number $x$ we have $x < 0$, $x = 0$, or $x > 0$. Therefore our assumption that $a \geq a + \varepsilon$ must be false and so we can conclude $a < a + \varepsilon$. 
+\end{proof}
+
+\begin{lemma}
+If $a, b \in \mathbb{R}$ and $a < b$, then $\displaystyle a < a + \frac{|b - a|}{2} < b$.
+\end{lemma}
+
+\begin{proof}
+Let $a, b \in \mathbb{R}$ and suppose $a < b$. Since $\displaystyle \frac{|b - a|}{2} > 0$ then by \autoref{lemma:a} $\displaystyle a < a + \frac{|b - a|}{2}$. 
+\end{proof}
+
+
+
+
+\end{document}
