@@ -91,9 +91,18 @@ The set $\mathbb{N}$ of natural numbers is a closed set in $\mathbb{R}$.
 \end{claim}
 
 \begin{proof}
-To show that $\mathbb{N}$ is a closed set in $\mathbb{R}$ we will show that $\mathbb{R} \setminus \mathbb{N}$ is open.
+To show that $\mathbb{N}$ is a closed set in $\mathbb{R}$ we will show that $\mathbb{R} \setminus \mathbb{N}$ is open. Let $G_n := (n, n + 1)$ for all $n \in \mathbb{N}$. Since $G_n$ is an open interval for all $n \in \mathbb{N}$, then $G_n$ is an open set for all $n \in \mathbb{N}$. Now if we show that $\displaystyle \mathbb{R} \setminus \mathbb{N} = \bigcup_{n \in \mathbb{N}} G_n$, then we can conclude the complement of $\mathbb{N}$ in $\mathbb{R}$ is open, which means $\mathbb{N}$ is closed. Now
+
+\begin{equation*}
+\begin{split}
+x \in \mathbb{R} \setminus \mathbb{N} &\iff \exists k \in \{1, 2, 3, \ldots\} \text{ such that } x \in (k, k + 1) \\
+&\iff x \in G_k \text{ for some } k \in \mathbb{N} \\
+&\iff x \in \bigcup_{k \in \mathbb{N}} G_k.
+\end{split}
+\end{equation*}
 \end{proof}
 
+Therefore $\displaystyle \mathbb{R} \setminus \mathbb{N} = \bigcup_{n \in \mathbb{N}} G_n$. Since the union of an arbitrary collection of open sets is open then $\displaystyle \bigcup_{n \in \mathbb{N}} G_n$ is open and therefore $\mathbb{R} \setminus \mathbb{N}$ is open. Thus the complement of $\mathbb{N}$ in $\mathbb{R}$ is open, so $\mathbb{N}$ is closed.
 \end{enumerate}
 
 
