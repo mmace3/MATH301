@@ -46,6 +46,7 @@
 
 \newtheorem*{proposition}{Proposition}
 \newtheorem{lemma}{Lemma}
+\newtheorem*{claim}{Claim}
 
 \newcommand{\lemmaautorefname}{Lemma}
 
@@ -59,15 +60,40 @@ Below are some exercises from our book that were suggested to be done in additio
 
 \section*{Section 11.1}
 
-\begin{enumerate}
+\begin{enumerate}[label=\arabic*., itemsep=1.5cm]
 
 \setcounter{enumi}{2}
 
 \item Write out the Induction argument in the proof of part (b) of the Open Set Properties 11.1.4.
 
+\vspace{0.5cm}
+
+\begin{claim}
+The intersection of any finite collection of open sets in $\mathbb{R}$ is open.
+\end{claim}
+
+\begin{proof}
+Let $G_n := G_1 \cap G_2 \cap \ldots \cap G_n$ where $n \in \mathbb{N}$ and $G_n$ is an open set for all $n \in \mathbb{N}$. To show that $G$ is open we will use an induction argument.
+
+\underline{Base Case:} Letting $n = 1$ we have that $G = G_1$ and $G_1$ is an open set by assumption so that $G$ is open in this case.
+
+\underline{Induction Step:} Suppose $n \geq 1$ and $\displaystyle \bigcap_{i = 1}^{n} (G_i)$ is an open set. Then $\displaystyle \bigcap_{i = 1}^{n + 1} (G_i) = (G_{n + 1}) \cap \bigg( \bigcap_{i = 1}^{n} G_i \bigg)$. Both $G_{n + 1}$ and $\displaystyle \bigcap_{i = 1}^{n} (G_i)$ are open by assumption. In the book it is proven that the intersection of two open sets are open and so we can conclude that $\displaystyle \bigcap_{i = 1}^{n + 1} (G_i)$ is open.
+\end{proof}
+
 \setcounter{enumi}{4}
 
-\item dfed
+\item Show that the set $\mathbb{N}$ of natural numbers is a closed set in $\mathbb{R}$.
+
+\vspace{0.5cm}
+
+\begin{claim}
+The set $\mathbb{N}$ of natural numbers is a closed set in $\mathbb{R}$.
+\end{claim}
+
+\begin{proof}
+To show that $\mathbb{N}$ is a closed set in $\mathbb{R}$ we will show that $\mathbb{R} \setminus \mathbb{N}$ is open.
+\end{proof}
+
 \end{enumerate}
 
 
